@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.frogermcs.imageclassificationtester">
+
+    <application>
+        <activity
+            android:name="com.frogermcs.imageclassificationtester.utils.ModelTestActivity"
+            android:theme="@style/AppThemeTest" />
+    </application>
+
+</manifest>
