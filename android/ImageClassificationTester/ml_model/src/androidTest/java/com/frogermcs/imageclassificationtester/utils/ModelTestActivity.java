@@ -23,8 +23,7 @@ public class ModelTestActivity extends AppCompatActivity {
 
     private ImageView ivPreview;
     private TextView tvClassification;
-
-    ModelClassificator modelClassificator;
+    private ModelClassificator modelClassificator;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +57,10 @@ public class ModelTestActivity extends AppCompatActivity {
 
     private void performClassification(Bitmap bitmap) {
         List<ClassificationResult> classificationResults = modelClassificator.process(bitmap);
+        showClassificationResults(classificationResults);
+    }
+
+    public void showClassificationResults(List<ClassificationResult> classificationResults) {
         runOnUiThread(() -> tvClassification.setText(ResultsUtils.resultsToStr(classificationResults)));
     }
 

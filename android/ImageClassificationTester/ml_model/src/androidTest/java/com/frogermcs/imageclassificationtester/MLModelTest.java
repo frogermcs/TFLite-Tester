@@ -55,10 +55,17 @@ public class MLModelTest {
         for (String valImagePath : valBatchImages) {
             ValImageInfo valImageInfo = new ValImageInfo(valImagePath);
             Bitmap bmp = TestUtils.getBitmapFromAsset(activity.getAssets(), "val_batch/" + valImagePath);
+
+            //Does nothing, it's just test's preview
+            activity.setImagePreview(bmp);
+
             List<ClassificationResult> classificationResults = modelClassificator.process(bmp);
             ClassificationResult topClassificationResult = classificationResults.get(0);
             batchClassificationResults.put(valImageInfo.n, topClassificationResult.labelIndex);
             batchClassificationExepectedResults.put(valImageInfo.n, valImageInfo.tflitePredict);
+
+            //Does nothing, it's just test's preview
+            activity.showClassificationResults(classificationResults);
         }
 
         Truth.assertThat(batchClassificationResults).isNotEmpty();
