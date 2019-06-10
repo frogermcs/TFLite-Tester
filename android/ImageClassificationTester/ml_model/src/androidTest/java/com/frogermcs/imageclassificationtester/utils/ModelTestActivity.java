@@ -28,6 +28,7 @@ public class ModelTestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("TFLite automated testing");
         setContentView(com.frogermcs.imageclassificationtester.test.R.layout.activity_model_test);
         ivPreview = findViewById(com.frogermcs.imageclassificationtester.test.R.id.ivPreview);
         tvClassification = findViewById(com.frogermcs.imageclassificationtester.test.R.id.tvClassification);
