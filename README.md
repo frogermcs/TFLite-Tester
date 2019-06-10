@@ -16,7 +16,7 @@ For more details, check:
 
 ## Android app tests preview
 
-[![Android app tests preview](https://github.com/frogermcs/TFLite-Tester/blob/master/art/auto-tests.gif)]
+![Android app tests preview](https://github.com/frogermcs/TFLite-Tester/blob/master/art/auto-tests.gif)
 
 ## Colab notebook
 
